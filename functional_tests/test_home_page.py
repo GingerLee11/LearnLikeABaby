@@ -1,6 +1,7 @@
 from selenium import webdriver
 
 import unittest
+import time
 
 
 class NewVisitorTest(unittest.TestCase):
@@ -13,10 +14,11 @@ class NewVisitorTest(unittest.TestCase):
 
     def test_can_view_home_page_information(self):
         # New user Akane visits learnlikeababy.com
-        self.browser.get('http://localhost:8000')
+        self.browser.get('http://localhost:8000/')
 
         # Sees Learn Like A Baby in the title of the page
-        self.assertIn(self.browser.title, 'Learn Like A Baby')
+        self.assertIn('Learn Like A Baby', self.browser.title)
+        time.sleep(4)
         
 
 

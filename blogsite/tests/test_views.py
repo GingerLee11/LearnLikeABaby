@@ -1,8 +1,10 @@
 from django.test import TestCase
 
-from django.test import TestCase
 
-class SmokeTest(TestCase):
+class TestHomePage(TestCase):
 
-    def test_bad_maths(self):
-        self.assertEqual(1 + 1, 3)
+    def test_uses_home_page_template(self):
+        response = self.client.get('/')
+        self.assertTemplateUsed(response, 'home.html')
+
+    

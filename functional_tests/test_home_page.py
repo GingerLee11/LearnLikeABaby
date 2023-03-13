@@ -31,11 +31,17 @@ class NewVisitorTest(FunctionalTest):
 
         # Sees the text explaining the name of the blog
         body = self.browser.find_element(By.TAG_NAME, 'body').text
-
+        
         ## This might change if the blog is updated, 
         # but at least I can test to make sure the content doesn't disappear
         self.assertIn('A blog about learning. Why like a baby?', body)
         self.assertIn("You can't fill a cup that is already full.", body)
 
-        self.fail('Finish the Test!')
+        # Akane sees all the different links for learning 
+        ## This list might change, but I still need to test all of the current links
+        learning_links = self.browser.find_elements(By.CLASS_NAME, 'list-group-item list-group-item-action')
+        for link in learning_links:
+            print(link.text)
+
+        self.fail('Finish the test!')
 

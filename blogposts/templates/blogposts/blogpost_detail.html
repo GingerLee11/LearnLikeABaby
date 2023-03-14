@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ blogpost.title }}{% endblock title %}
+
+{% block content %}
+<div class="container my-5">
+  <div class="row">
+    <div class="col-md-8">
+      <h1>{{ blogpost.title }}</h1>
+      {% if blogpost.sub_title %}
+        <h3>{{ blogpost.sub_title }}</h3>
+      {% endif %}
+      <hr>
+      <p class="text-muted mb-0">
+        <small>
+          {{ blogpost.date_published|date:"F d, Y" }} by {{ blogpost.author }}
+        </small>
+      </p>
+      <p class="text-muted mb-0">
+        <small>
+          {% for category in blogpost.category.all %}
+            {{ category }}{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+        </small>
+      </p>
+      <p class="text-muted mb-4">
+        <small>
+          {% for language in blogpost.language.all %}
+            {{ language }}{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+        </small>
+      </p>
+      <div class="mb-5">
+        {{ blogpost.content|safe }}
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

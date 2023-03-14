@@ -1,3 +1,38 @@
 {% extends 'base.html' %}
 
 {% block title %}Blog Posts{% endblock title %}
+
+{% block content %}
+  <div class="container-md">
+    <div class="text-center">
+        <h1 class="my-3">Blog Posts</h1>
+    </div>
+    <div class="list-group">
+      {% for post in object_list %}
+        <a href="{% url 'blogpost-detail' post.pk %}" class="list-group-item list-group-item-action">
+          <div class="d-flex w-100 justify-content-between">
+            <h5 class="mb-1">{{ post.title }}</h5>
+            <small>{{ post.date_published|date:"d M Y" }}</small>
+          </div>
+          {% if post.sub_title %}
+            <p class="mb-1">{{ post.sub_title }}</p>
+          {% endif %}
+          <small>
+            {% if post.author %}
+              {{ post.author.get_full_name|default:post.author.username }},
+            {% endif %}
+            {{ post.date_modified|date:"d M Y" }},
+            {% for lang in post.language.all %}
+              <span class="badge badge-secondary">{{ lang.name }}</span>
+            {% endfor %}
+            {% for cat in post.category.all %}
+              <span class="badge badge-info">{{ cat.name }}</span>
+            {% endfor %}
+          </small>
+        </a>
+      {% empty %}
+        <li id="empty-list" class="list-group-item">No blog posts yet.</li>
+      {% endfor %}
+    </div>
+  </div>
+{% endblock content %}

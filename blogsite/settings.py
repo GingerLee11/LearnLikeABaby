@@ -30,6 +30,13 @@ DEBUG = True
 ALLOWED_HOSTS = []
 
 
+# Custom user is defined here:
+AUTH_USER_MODEL = 'users.User'
+# Allows users to login with email or username
+AUTHENTICATION_BACKENDS = [
+    'users.backends.EmailBackend',
+    ]
+
 # Application definition
 
 INSTALLED_APPS = [
@@ -42,6 +49,7 @@ INSTALLED_APPS = [
     'crispy_forms',
     'crispy_bootstrap5',
     'blogposts',
+    'users',
 ]
 
 CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"

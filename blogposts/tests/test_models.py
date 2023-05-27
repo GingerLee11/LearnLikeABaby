@@ -153,7 +153,7 @@ class BlogPostTest(TestCase):
             self.blogpost1,
         ]
         qs = BlogPost.objects.all()
-        self.assertQuerysetEqual(qs, expected_ordering, ordered=True)
+        self.assertQuerysetEqual(qs, expected_ordering)
 
     def test_category_name(self):
         category1 = Category.objects.get(id=self.category1.id)

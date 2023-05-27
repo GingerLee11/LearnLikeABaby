@@ -8,29 +8,29 @@
         <h1 class="my-3">Blog Posts</h1>
     </div>
     <div class="list-group">
-      {% for post in object_list %}
-        <a href="{% url 'blogpost-detail' post.pk %}" class="list-group-item list-group-item-action">
+      {% for blog_post in object_list %}
+        <a href="{% url 'blogpost-detail' blog_post.pk %}" class="list-group-item list-group-item-action">
           <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">{{ post.title }}</h5>
-            <small>{{ post.date_published|date:"d M Y" }}</small>
+            <h5 class="mb-1">{{ blog_post.title }}</h5>
+            <small>{{ blog_post.date_published|date:"d M Y" }}</small>
           </div>
-          {% if post.sub_title %}
-            <p class="mb-1">{{ post.sub_title }}</p>
+          {% if blog_post.sub_title %}
+            <p class="mb-1">{{ blog_post.sub_title }}</p>
           {% endif %}
           <small>
-            {% if post.author %}
-              {{ post.author.get_full_name|default:post.author.username }},
+            {% if blog_post.author %}
+              {{ blog_post.author.get_full_name|default:blog_post.author.username }},
             {% endif %}
-            {{ post.date_modified|date:"d M Y" }}
+            {{ blog_post.date_modified|date:"d M Y" }}
             <div>
                 Languages:
-                {% for lang in post.language.all %}
+                {% for lang in blog_post.language.all %}
                   <span class="">{{ lang.name }}</span>
                 {% endfor %}
             </div>
             <div>
                 Categories:
-                {% for cat in post.category.all %}
+                {% for cat in blog_post.category.all %}
                   <span class="">{{ cat.name }}</span>
                 {% endfor %}
             </div>

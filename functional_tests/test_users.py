@@ -57,6 +57,3 @@ class BlogPostTests(FunctionalTest):
 
         self.wait_for(lambda: self.assertIn('Learn Like A Baby', self.browser.title))
 
-
-
-        self.fail('Finish the test!')

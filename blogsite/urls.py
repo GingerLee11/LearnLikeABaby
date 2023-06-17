@@ -20,10 +20,16 @@ from django.conf.urls.static import static
 from django.contrib.auth import views as auth_views
 
 from . import views
+from users.forms import CustomAuthenticationForm
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('login/', auth_views.LoginView.as_view(template_name="registration/login.html"), name='login'),
+    path('login/', auth_views.LoginView.as_view(
+        template_name="registration/login.html",
+        authentication_form=CustomAuthenticationForm), 
+        name='login'
+        ),
+    path('logout/', auth_views.LogoutView.as_view(next_page='home'), name='logout'),
     path('register/', views.RegisterView.as_view(), name='register'),
     path('', views.HomePageView.as_view(), name='home'),
     path('blog/', include('blogposts.urls')),

@@ -27,7 +27,7 @@ class CustomUserCreationFormTest(TestCase):
 class CustomAuthenticationFormTest(TestCase):
 
     def setUp(self):
-        User.objects.create_user(username='example@test.com', password='supertest')
+        User.objects.create_user(email='example@test.com', password='supertest')
 
     def test_form_has_fields(self):
         form = CustomAuthenticationForm()

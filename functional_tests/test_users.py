@@ -75,6 +75,3 @@ class UserTests(FunctionalTest):
 
         self.wait_for(lambda: self.assertIn('Account Page', self.browser.title))
 
-        time.sleep(5)
-
-        self.fail('Finish the Test')

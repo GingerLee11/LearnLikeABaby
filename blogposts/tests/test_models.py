@@ -54,7 +54,7 @@ class BlogPostTest(TestCase):
     @classmethod
     def setUpTestData(cls):
         cls.user = User.objects.create_user(
-            username='testuser', password='testpass'
+            email='test@user.com', password='testpass'
         )
         cls.category1 = Category.objects.create(name='Category 1')
         cls.category2 = Category.objects.create(name='Category 2')
@@ -148,12 +148,12 @@ class BlogPostTest(TestCase):
 
     def test_ordering(self):
         expected_ordering = [
-            self.blogpost3,
-            self.blogpost2,
-            self.blogpost1,
+            self.blogpost3.pk,
+            self.blogpost2.pk,
+            self.blogpost1.pk,
         ]
-        qs = BlogPost.objects.all()
-        self.assertQuerysetEqual(qs, expected_ordering)
+        qs = BlogPost.objects.all().values_list('pk', flat=True)
+        self.assertListEqual(list(qs), expected_ordering)
 
     def test_category_name(self):
         category1 = Category.objects.get(id=self.category1.id)

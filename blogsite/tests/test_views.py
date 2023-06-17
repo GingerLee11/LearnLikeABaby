@@ -2,6 +2,8 @@ from django.test import TestCase
 from django.urls import reverse
 from django.contrib.auth import get_user_model
 
+User = get_user_model()
+
 
 class TestHomePage(TestCase):
 
@@ -24,9 +26,9 @@ class RegistrationViewTest(TestCase):
 
 
 class LoginViewTest(TestCase):
-
+    
     def setUp(self):
-        self.user = get_user_model().objects.create_user(
+        self.user = User.objects.create_user(
             username='testuser',
             email='test@example.com',
             password='testpassword',
@@ -37,6 +39,13 @@ class LoginViewTest(TestCase):
             'username': 'testuser',
             'password': 'testpassword',
         })
+        self.assertEqual(response.status_code, 302)  # Expecting a redirect
+        self.assertEqual(int(self.client.session['_auth_user_id']), self.user.pk)
 
+    def test_can_login_with_email(self):
+        response = self.client.post(reverse('login'), {
+            'username': 'test@example.com',
+            'password': 'testpassword',
+        })
         self.assertEqual(response.status_code, 302)  # Expecting a redirect
         self.assertEqual(int(self.client.session['_auth_user_id']), self.user.pk)

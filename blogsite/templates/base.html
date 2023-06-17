@@ -29,11 +29,11 @@
                 <ul class="navbar-nav">
                   {% if user.is_authenticated %}
                       <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          <a class="nav-link dropdown-toggle" href="#" id="user-nav-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                               User: {{ user.email }}
                           </a>
                           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                              <li><a class="dropdown-item" href="#">Account Page</a></li>
+                              <li><a class="dropdown-item" href="{% url 'user-detail' user.pk %}">Account Page</a></li>
                               <li><hr class="dropdown-divider"></li>
                               <li><a class="dropdown-item" href="{% url 'logout' %}?next={{request.path}}">Logout</a></li>
                           </ul>

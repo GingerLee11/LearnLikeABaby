@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% load crispy_forms_tags %}
+
+{% block title %}Account Page{% endblock title %}
+
+{% block content %}
+<div class="container-md">
+    <div class="text-center mt-5">
+        <h1 class="mb-4">User Detail</h1>
+    </div>
+    <div class="row justify-content-center">
+        <div class="col-md-6">
+            <div class="card shadow">
+                <div class="card-body">
+                {% if user.username %}
+                    <p><strong>Username:</strong> {{ user.username }}</p>
+                {% endif %}
+                    <p><strong>Email:</strong> {{ user.email }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock content %}

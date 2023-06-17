@@ -9,17 +9,16 @@ import time
 from .base import FunctionalTest
 
 
-class BlogPostTests(FunctionalTest):
+class UserTests(FunctionalTest):
 
-    def test_can_register_and_then_login(self):
+    def test_user_can_register_and_then_login(self):
 
         # New user visits learnlikeababy.com
         self.browser.get(self.live_server_url)
 
         # Sees Learn Like A Baby in the browser title of the page
-        self.wait_for(lambda:
-            self.assertIn('Learn Like A Baby', self.browser.title)
-        )
+        self.wait_for(lambda: self.assertIn('Learn Like A Baby', self.browser.title))
+
         # User sees the Login button at the top right of the page and clicks on it
         self.browser.find_element(By.LINK_TEXT, 'Login').click()
 
@@ -57,3 +56,25 @@ class BlogPostTests(FunctionalTest):
 
         self.wait_for(lambda: self.assertIn('Learn Like A Baby', self.browser.title))
 
+    def test_user_can_view_their_account_page(self):
+
+        # Returning user vists learnlikeababy.com
+        self.browser.get(self.live_server_url)
+
+        # Sees Learn Like A Baby in the browser title of the page
+        self.wait_for(lambda: self.assertIn('Learn Like A Baby', self.browser.title))
+
+        # They already have an account, so they go to login
+        self.create_and_authenticate_user()
+
+        self.wait_for(lambda: self.assertIn('Learn Like A Baby', self.browser.title))
+
+        # They click on their user information dropdown, see Account Page, and click on it
+        self.wait_for(lambda: self.browser.find_element(By.ID, 'user-nav-toggle').click())
+        self.wait_for(lambda: self.browser.find_element(By.LINK_TEXT, 'Account Page').click())
+
+        self.wait_for(lambda: self.assertIn('Account Page', self.browser.title))
+
+        time.sleep(5)
+
+        self.fail('Finish the Test')

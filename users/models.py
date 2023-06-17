@@ -14,7 +14,7 @@ class User(AbstractUser):
     email_verified = models.BooleanField(_('Email Verified'), default=False)
     username = models.CharField(_("Username"), max_length=150, unique=True)
 
-    users = CustUserManager()
+    objects = CustUserManager()
     
     def __str__(self):
         return f"{self.username}"

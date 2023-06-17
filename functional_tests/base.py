@@ -1,5 +1,5 @@
 from django.contrib.staticfiles.testing import StaticLiveServerTestCase
-
+from django.contrib.auth import get_user_model
 
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
@@ -9,6 +9,7 @@ from selenium.webdriver.common.by import By
 import time
 
 MAX_WAIT = 10
+User = get_user_model()
 
 def wait(fn):
     def modified_fn(*args, **kwargs):
@@ -34,6 +35,26 @@ class FunctionalTest(StaticLiveServerTestCase):
     @wait
     def wait_for(self, fn):
         return fn()
+    
+    def create_and_authenticate_user(self, first_name='Test', last_name='User', email='test@example.com', password='Somanythings!'):
+
+        # Create the user
+        user = User.objects.create_user(first_name=first_name, last_name=last_name, email=email, password=password)
+
+        # Visit the login page
+        self.browser.get(self.live_server_url + '/login/')
+
+        # Fill in the login form
+        email_input = self.browser.find_element(By.ID, 'id_email')
+        email_input.send_keys(email)
+        password_input = self.browser.find_element(By.ID, 'id_password')
+        password_input.send_keys(password)
+        password_input.send_keys(Keys.ENTER)
+
+        # Wait for the login process to complete
+        self.wait_for(lambda: self.assertEqual(self.browser.current_url, self.live_server_url + '/'))
+
+        return user
     
     @wait
     def fill_out_form(self, form_attributes):

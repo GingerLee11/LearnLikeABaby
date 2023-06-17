@@ -26,7 +26,7 @@ class RegistrationViewTest(TestCase):
 
 
 class LoginViewTest(TestCase):
-    
+
     def setUp(self):
         self.user = User.objects.create_user(
             username='testuser',

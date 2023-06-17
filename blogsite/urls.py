@@ -33,6 +33,7 @@ urlpatterns = [
     path('register/', views.RegisterView.as_view(), name='register'),
     path('', views.HomePageView.as_view(), name='home'),
     path('blog/', include('blogposts.urls')),
+    path('users/', include('users.urls')),
     path('summernote/', include('django_summernote.urls')),
 ]
 

@@ -14,14 +14,13 @@ class RegistrationViewTest(TestCase):
 
     def test_can_register_user(self):
         response = self.client.post(reverse('register'), {
-            'username': 'testuser',
             'email': 'test@example.com',
             'password1': 'testpassword',
             'password2': 'testpassword',
         })
 
         self.assertEqual(response.status_code, 302)  # Expecting a redirect
-        self.assertTrue(get_user_model().objects.filter(username='testuser').exists())
+        self.assertTrue(get_user_model().objects.filter(email='test@example.com').exists())
 
 
 class LoginViewTest(TestCase):

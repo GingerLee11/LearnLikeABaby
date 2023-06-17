@@ -11,6 +11,7 @@ class User(AbstractUser):
     and/or other customizations can take place with the users.
     """
     email = models.EmailField(_('Email Address'), unique=True)
+    email_verified = models.BooleanField(_('Email Verified'), default=False)
     username = models.CharField(_("Username"), max_length=150, unique=True)
 
     users = CustUserManager()

@@ -3,6 +3,8 @@ from django.contrib.staticfiles.testing import StaticLiveServerTestCase
 
 from selenium import webdriver
 from selenium.common.exceptions import WebDriverException
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.by import By
 
 import time
 
@@ -32,5 +34,19 @@ class FunctionalTest(StaticLiveServerTestCase):
     @wait
     def wait_for(self, fn):
         return fn()
+    
+    @wait
+    def fill_out_form(self, form_attributes):
+        for attribute_id, text in form_attributes.items():
+            element = self.browser.find_element(By.ID, attribute_id)
+            if text == None:
+                self.wait_for(lambda:
+                    element.click()
+                )
+            else:
+                self.wait_for(lambda:
+                    element.send_keys(text)
+                )
+        element.submit()
 
     

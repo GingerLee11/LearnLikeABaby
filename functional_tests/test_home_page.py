@@ -10,15 +10,9 @@ from .base import FunctionalTest
 
 class NewVisitorTest(FunctionalTest):
 
-    def setUp(self):
-        self.browser = webdriver.Firefox()
-
-    def tearDown(self):
-        self.browser.quit()
-
     def test_can_view_home_page_information(self):
         # New user Akane visits learnlikeababy.com
-        self.browser.get('http://localhost:8000/')
+        self.browser.get(self.live_server_url)
 
         # Sees Learn Like A Baby in the browser title of the page
         self.wait_for(lambda:

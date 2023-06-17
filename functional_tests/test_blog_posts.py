@@ -11,15 +11,10 @@ from .base import FunctionalTest
 
 class BlogPostTests(FunctionalTest):
 
-    def setUp(self):
-        self.browser = webdriver.Firefox()
+    def test_can_view_blog_post_information(self):
 
-    def tearDown(self):
-        self.browser.quit()
-
-    def test_can_view_home_page_information(self):
         # New user Akane visits learnlikeababy.com
-        self.browser.get('http://localhost:8000/')
+        self.browser.get(self.live_server_url)
 
         # Sees Learn Like A Baby in the browser title of the page
         self.wait_for(lambda:
@@ -37,4 +32,6 @@ class BlogPostTests(FunctionalTest):
             self.assertIn('Blog Posts', self.browser.title)    
         )
 
-        
+    def test_user_can_create_update_and_delete_a_blog_post(self):
+        # New user tries to create, update and delete blog posts
+        self.browser.get(self.live_server_url)

@@ -48,7 +48,6 @@ class LanguageModelTest(TestCase):
         self.assertEqual(expected_object_name, str(language))
 
 
-
 class BlogPostTest(TestCase):
 
     @classmethod

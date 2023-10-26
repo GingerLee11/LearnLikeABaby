@@ -21,6 +21,15 @@ class CustomUserCreationForm(UserCreationForm):
         super().__init__(*args, **kwargs)
         self.fields["email"].label = "Email address"
 
+    def clean(self):
+        cleaned_data = super().clean()
+        email = cleaned_data.get('email')
+
+        if User.objects.filter(email=email).exists():
+            self.add_error('email', 'This email is already registered.')
+
+        return cleaned_data
+
 
 class CustomUserChangeForm(UserChangeForm):
 

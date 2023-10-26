@@ -22,6 +22,15 @@ class CustomUserCreationFormTest(TestCase):
         })
         self.assertTrue(form.is_valid())
 
+    def test_user_creation_form_duplicate_email(self):
+        User.objects.create_user(username='testuser', email='example@test.com', password='supertest')
+        form = CustomUserCreationForm(data={
+            'email': 'example@test.com',
+            'password1': 'supertest',
+            'password2': 'supertest',
+        })
+        self.assertFalse(form.is_valid())
+        self.assertIn('email', form.errors)
 
 
 class CustomAuthenticationFormTest(TestCase):

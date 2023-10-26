@@ -26,11 +26,11 @@ class CustomUserAdmin(UserAdmin):
     )
     add_fieldsets = (
         (None, {
-        'fields': ('username', 'password1', 'password2'),
+        'fields': ('email', 'password1', 'password2'),
         'classes': ('wide',)
         }),
     )
-    list_display = ('username', 'is_staff', 'is_superuser', 'last_login')
+    list_display = ('email', 'is_staff', 'is_superuser', 'last_login')
     list_filter = ('is_staff', 'is_active')
     search_fields = ('username',)
     ordering = ('username',)

@@ -16,6 +16,7 @@ class CustomUserCreationFormTest(TestCase):
 
     def test_user_creation_form_valid(self):
         form = CustomUserCreationForm(data={
+            'username': 'admin',
             'email': 'example@test.com',
             'password1': 'supertest',
             'password2': 'supertest',
@@ -25,12 +26,24 @@ class CustomUserCreationFormTest(TestCase):
     def test_user_creation_form_duplicate_email(self):
         User.objects.create_user(username='testuser', email='example@test.com', password='supertest')
         form = CustomUserCreationForm(data={
+            'username': 'testuser2',
             'email': 'example@test.com',
             'password1': 'supertest',
             'password2': 'supertest',
         })
         self.assertFalse(form.is_valid())
         self.assertIn('email', form.errors)
+
+    def test_user_creation_form_duplicate_username(self):
+        User.objects.create_user(username='testuser', email='example@test.com', password='supertest')
+        form = CustomUserCreationForm(data={
+            'username': 'testuser',
+            'email': 'example@test1.com',
+            'password1': 'supertest',
+            'password2': 'supertest',
+        })
+        self.assertFalse(form.is_valid())
+        self.assertIn('username', form.errors)
 
 
 class CustomAuthenticationFormTest(TestCase):

@@ -38,18 +38,10 @@ class UserTests(FunctionalTest):
 
         # They fill in their registration information
         form_attributes = {
+            'id_username': 'testuser',
             'id_email': 'test@exmple.com',
             'id_password1': 'noonecanguessthis!',
             'id_password2': 'noonecanguessthis!',
-        }
-
-        self.fill_out_form(form_attributes)
-
-        self.wait_for(lambda: self.assertIn('Login', self.browser.title))
-
-        form_attributes = {
-            'id_email': 'test@exmple.com',
-            'id_password': 'noonecanguessthis!',
         }
 
         self.fill_out_form(form_attributes)

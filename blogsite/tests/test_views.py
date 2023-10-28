@@ -16,6 +16,7 @@ class RegistrationViewTest(TestCase):
 
     def test_can_register_user(self):
         response = self.client.post(reverse('register'), {
+            'username': 'testuser',
             'email': 'test@example.com',
             'password1': 'testpassword',
             'password2': 'testpassword',

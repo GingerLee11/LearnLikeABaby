@@ -15,7 +15,7 @@ class CustomUserCreationForm(UserCreationForm):
 
     class Meta:
         model = User
-        fields = ("email",)
+        fields = ("username", "email",)
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
@@ -24,9 +24,13 @@ class CustomUserCreationForm(UserCreationForm):
     def clean(self):
         cleaned_data = super().clean()
         email = cleaned_data.get('email')
+        username = cleaned_data.get('username')
 
         if User.objects.filter(email=email).exists():
             self.add_error('email', 'This email is already registered.')
+    
+        if User.objects.filter(username=username).exists():
+            self.add_error('username', 'This username is already registered.')
 
         return cleaned_data
 

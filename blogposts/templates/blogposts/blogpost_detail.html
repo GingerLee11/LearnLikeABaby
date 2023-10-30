@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block title %}{{ blogpost.title }}{% endblock title %}
 
@@ -25,6 +26,7 @@
       </p>
       <p class="text-muted mb-4">
         <small>
+          {% trans "Select another language" %}:
           {% for language in blogpost.language.all %}
             {{ language }}{% if not forloop.last %}, {% endif %}
           {% endfor %}

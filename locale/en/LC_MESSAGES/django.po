@@ -1,0 +1,220 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-29 19:36-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\blogposts\models.py:9
+msgid "Category Name"
+msgstr ""
+
+#: .\blogposts\models.py:16
+msgid "Language Name"
+msgstr ""
+
+#: .\blogposts\models.py:26
+msgid "Title"
+msgstr ""
+
+#: .\blogposts\models.py:27
+msgid "Sub-title"
+msgstr ""
+
+#: .\blogposts\models.py:31
+msgid "Published"
+msgstr ""
+
+#: .\blogposts\models.py:32
+msgid "Last Modified"
+msgstr ""
+
+#: .\blogposts\models.py:33
+msgid "Content"
+msgstr ""
+
+#: .\blogposts\templates\blogposts\blogpost_detail.html:29
+msgid "Select another language"
+msgstr ""
+
+#: .\blogposts\templates\blogposts\blogpost_list.html:4
+#: .\blogposts\templates\blogposts\blogpost_list.html:9
+#: .\blogsite\templates\base.html:28
+msgid "Blog Posts"
+msgstr ""
+
+#: .\blogposts\templates\blogposts\blogpost_list.html:27
+msgid "Article available in the following languages"
+msgstr ""
+
+#: .\blogposts\templates\blogposts\blogpost_list.html:33
+msgid "Categories"
+msgstr ""
+
+#: .\blogposts\templates\blogposts\blogpost_list.html:41
+msgid "No blog posts yet."
+msgstr ""
+
+#: .\blogsite\settings.py:136 .\blogsite\templates\home.html:22
+msgid "English"
+msgstr ""
+
+#: .\blogsite\settings.py:137 .\blogsite\templates\home.html:23
+msgid "Japanese"
+msgstr ""
+
+#: .\blogsite\settings.py:138 .\blogsite\templates\home.html:24
+msgid "Spanish"
+msgstr ""
+
+#: .\blogsite\settings.py:139
+msgid "Korean"
+msgstr ""
+
+#: .\blogsite\templates\base.html:13 .\blogsite\templates\base.html:21
+#: .\blogsite\templates\home.html:4 .\blogsite\templates\home.html:9
+msgid "Learn Like A Baby"
+msgstr ""
+
+#: .\blogsite\templates\base.html:22
+msgid "Toggle navigation"
+msgstr ""
+
+#: .\blogsite\templates\base.html:35
+msgid "User"
+msgstr ""
+
+#: .\blogsite\templates\base.html:38 .\users\templates\users\user_detail.html:6
+msgid "Account Page"
+msgstr ""
+
+#: .\blogsite\templates\base.html:40
+msgid "Logout"
+msgstr ""
+
+#: .\blogsite\templates\base.html:44
+msgid "Login"
+msgstr ""
+
+#: .\blogsite\templates\home.html:14
+msgid ""
+"\n"
+"                A blog about language learning. Why like a baby? \n"
+"                The language learning process is often hampered by "
+"preconceived notions and bad habits; \n"
+"                when you learn like a baby, you are curious and unafraid of "
+"failure.\n"
+"                "
+msgstr ""
+
+#: .\blogsite\templates\home.html:20
+msgid "What language has caught your fancy?"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:4
+#: .\blogsite\templates\japanese\japanese_home.html:9
+msgid "Learn Japanese Like A Baby"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:11
+msgid ""
+"Welcome to your Japanese Language journey, where you'll learn like a baby—"
+"curious, unafraid, and step-by-step."
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:17
+msgid "Choose Your Level"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:23
+msgid "Japanese Language Baby"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:23
+msgid "(Mimic ages 0 - 1)"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:24
+msgid ""
+"Your job is to listen and watch as much as you can. Be a curious sponge!"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:25
+#: .\blogsite\templates\japanese\japanese_home.html:36
+#: .\blogsite\templates\japanese\japanese_home.html:47
+msgid "Start Learning"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:34
+msgid "Japanese Language Toddler"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:34
+msgid "(Mimic ages 1 - 5)"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:35
+msgid "Start interacting with the world. Learn basic words and concepts."
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:45
+msgid "Japanese Language Child"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:45
+msgid "(Mimic ages 5 - 10)"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:46
+msgid ""
+"Aim for full conversational fluency and learn to read Hiragana and Katakana."
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:58
+msgid "Resources"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:60
+msgid "Shows to Watch"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:61
+msgid "Books to Read"
+msgstr ""
+
+#: .\blogsite\templates\japanese\japanese_home.html:62
+msgid "YouTube Channels"
+msgstr ""
+
+#: .\users\models.py:13
+msgid "Email Address"
+msgstr ""
+
+#: .\users\models.py:14
+msgid "Email Verified"
+msgstr ""
+
+#: .\users\models.py:15 .\users\templates\users\user_detail.html:18
+msgid "Username"
+msgstr ""
+
+#: .\users\templates\users\user_detail.html:11
+msgid "User Detail"
+msgstr ""
+
+#: .\users\templates\users\user_detail.html:20
+msgid "Email"
+msgstr ""

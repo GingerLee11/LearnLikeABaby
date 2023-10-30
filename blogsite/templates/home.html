@@ -1,25 +1,27 @@
 {% extends 'base.html' %}
 {% load i18n %}
 
-{% block title %}Learn Like A Baby{% endblock title %}
+{% block title %}{% trans "Learn Like A Baby" %}{% endblock title %}
 
 {% block content %}
 <div class="container-md">
     <div class="text-center">
-        <h1 class="my-3">Learn Like A Baby</h1>
+        <h1 class="my-3">{% trans "Learn Like A Baby" %}</h1>
     </div>
     <div class="row justify-content-center">
         <div class="col-md-10">
             <p class="lead my-2">
+                {% blocktrans %}
                 A blog about language learning. Why like a baby? 
                 The language learning process is often hampered by preconceived notions and bad habits; 
-                when you learn like a baby, you are curious and unafraid of failure. 
+                when you learn like a baby, you are curious and unafraid of failure.
+                {% endblocktrans %}
             </p>
-            <h4 class="my-3"><em>What language has caught your fancy?</em></h4>
+            <h4 class="my-3"><em>{% trans "What language has caught your fancy?" %}</em></h4>
             <ul class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">English</a>
-                <a href="#" class="list-group-item list-group-item-action">Japanese</a>
-                <a href="#" class="list-group-item list-group-item-action">Spanish</a>
+                <a href="#" class="list-group-item list-group-item-action">{% trans "English" %}</a>
+                <a href="{% url "japanese-home" %}" class="list-group-item list-group-item-action">{% trans "Japanese" %}</a>
+                <a href="#" class="list-group-item list-group-item-action">{% trans "Spanish" %}</a>
             </ul>
         </div>
     </div>

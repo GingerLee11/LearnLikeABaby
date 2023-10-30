@@ -1,0 +1,218 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-10-29 19:36-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\blogposts\models.py:9
+msgid "Category Name"
+msgstr "Nombre de la categoría"
+
+#: .\blogposts\models.py:16
+msgid "Language Name"
+msgstr "Nombre del idioma"
+
+#: .\blogposts\models.py:26
+msgid "Title"
+msgstr "Título"
+
+#: .\blogposts\models.py:27
+msgid "Sub-title"
+msgstr "Subtítulo"
+
+#: .\blogposts\models.py:31
+msgid "Published"
+msgstr "Publicado"
+
+#: .\blogposts\models.py:32
+msgid "Last Modified"
+msgstr "Última modificación"
+
+#: .\blogposts\models.py:33
+msgid "Content"
+msgstr "Contenido"
+
+#: .\blogposts\templates\blogposts\blogpost_detail.html:29
+msgid "Select another language"
+msgstr "Selecciona otro idioma"
+
+#: .\blogposts\templates\blogposts\blogpost_list.html:4
+#: .\blogposts\templates\blogposts\blogpost_list.html:9
+#: .\blogsite\templates\base.html:28
+msgid "Blog Posts"
+msgstr "Publicaciones del blog"
+
+#: .\blogposts\templates\blogposts\blogpost_list.html:27
+msgid "Article available in the following languages"
+msgstr "Artículo disponible en los siguientes idiomas"
+
+#: .\blogposts\templates\blogposts\blogpost_list.html:33
+msgid "Categories"
+msgstr "Categorías"
+
+#: .\blogposts\templates\blogposts\blogpost_list.html:41
+msgid "No blog posts yet."
+msgstr "Todavía no hay publicaciones en el blog"
+
+#: .\blogsite\settings.py:136 .\blogsite\templates\home.html:22
+msgid "English"
+msgstr "Inglés"
+
+#: .\blogsite\settings.py:137 .\blogsite\templates\home.html:23
+msgid "Japanese"
+msgstr "Japonés"
+
+#: .\blogsite\settings.py:138 .\blogsite\templates\home.html:24
+msgid "Spanish"
+msgstr "Español"
+
+#: .\blogsite\settings.py:139
+msgid "Korean"
+msgstr "Coreano"
+
+#: .\blogsite\templates\base.html:13 .\blogsite\templates\base.html:21
+#: .\blogsite\templates\home.html:4 .\blogsite\templates\home.html:9
+msgid "Learn Like A Baby"
+msgstr "Aprende como un bebé"
+
+#: .\blogsite\templates\base.html:35
+msgid "User"
+msgstr "Usuario"
+
+#: .\blogsite\templates\base.html:38 .\users\templates\users\user_detail.html:6
+msgid "Account Page"
+msgstr "Página de cuenta"
+
+#: .\blogsite\templates\base.html:40
+msgid "Logout"
+msgstr "Cerrar sesión"
+
+#: .\blogsite\templates\base.html:44
+msgid "Login"
+msgstr "Iniciar sesión"
+
+#: .\blogsite\templates\home.html:14
+msgid ""
+"\n"
+"                A blog about language learning. Why like a baby? \n"
+"                The language learning process is often hampered by "
+"preconceived notions and bad habits; \n"
+"                when you learn like a baby, you are curious and unafraid of "
+"failure.\n"
+"                "
+msgstr ""
+"\n"
+"                Un blog sobre el aprendizaje de idiomas. ¿Por qué como un bebé? \n"
+"                El proceso de aprendizaje de idiomas a menudo se ve obstaculizado por "
+"ideas preconcebidas y malos hábitos; \n"
+"                cuando aprendes como un bebé, eres curioso y no tienes miedo al fracaso.\n"
+"                "
+
+#: .\blogsite\templates\home.html:20
+msgid "What language has caught your fancy?"
+msgstr "¿Qué idioma ha captado tu atención?"
+
+#: .\blogsite\templates\japanese\japanese_home.html:4
+#: .\blogsite\templates\japanese\japanese_home.html:9
+msgid "Learn Japanese Like A Baby"
+msgstr "Aprende japonés como un bebé"
+
+#: .\blogsite\templates\japanese\japanese_home.html:11
+msgid "Welcome to your Japanese Language journey, where you'll learn like a baby—curious, unafraid, and step-by-step."
+msgstr "Bienvenido a tu viaje de aprendizaje del idioma japonés, donde aprenderás como un bebé: curioso, sin miedo y paso a paso."
+
+#: .\blogsite\templates\japanese\japanese_home.html:17
+msgid "Choose Your Level"
+msgstr "Elige tu nivel"
+
+#: .\blogsite\templates\japanese\japanese_home.html:23
+msgid "Japanese Language Baby"
+msgstr "Bebé del idioma japonés"
+
+#: .\blogsite\templates\japanese\japanese_home.html:23
+msgid "(Mimic ages 0 - 1)"
+msgstr "(Imita las edades de 0 a 1)"
+
+#: .\blogsite\templates\japanese\japanese_home.html:24
+msgid "Your job is to listen and watch as much as you can. Be a curious sponge!"
+msgstr "Tu trabajo es escuchar y observar todo lo que puedas. ¡Sé una esponja curiosa!"
+
+#: .\blogsite\templates\japanese\japanese_home.html:25
+#: .\blogsite\templates\japanese\japanese_home.html:36
+#: .\blogsite\templates\japanese\japanese_home.html:47
+msgid "Start Learning"
+msgstr "Comienza a aprender"
+
+#: .\blogsite\templates\japanese\japanese_home.html:34
+msgid "Japanese Language Toddler"
+msgstr "Niño pequeño del idioma japonés"
+
+#: .\blogsite\templates\japanese\japanese_home.html:34
+msgid "(Mimic ages 1 - 5)"
+msgstr "(Imita las edades de 1 a 5)"
+
+#: .\blogsite\templates\japanese\japanese_home.html:35
+msgid "Start interacting with the world. Learn basic words and concepts."
+msgstr "Comienza a interactuar con el mundo. Aprende palabras y conceptos básicos."
+
+#: .\blogsite\templates\japanese\japanese_home.html:45
+msgid "Japanese Language Child"
+msgstr "Niño del idioma japonés"
+
+#: .\blogsite\templates\japanese\japanese_home.html:45
+msgid "(Mimic ages 5 - 10)"
+msgstr "(Imita las edades de 5 a 10)"
+
+#: .\blogsite\templates\japanese\japanese_home.html:46
+msgid "Aim for full conversational fluency and learn to read Hiragana and Katakana."
+msgstr "Apunta a tener una fluidez conversacional completa y aprende a leer Hiragana y Katakana."
+
+#: .\blogsite\templates\japanese\japanese_home.html:58
+msgid "Resources"
+msgstr "Recursos"
+
+#: .\blogsite\templates\japanese\japanese_home.html:60
+msgid "Shows to Watch"
+msgstr "Programas para ver"
+
+#: .\blogsite\templates\japanese\japanese_home.html:61
+msgid "Books to Read"
+msgstr "Libros para leer"
+
+#: .\blogsite\templates\japanese\japanese_home.html:62
+msgid "YouTube Channels"
+msgstr "Canales de YouTube"
+
+#: .\users\models.py:13
+msgid "Email Address"
+msgstr "Dirección de correo electrónico"
+
+#: .\users\models.py:14
+msgid "Email Verified"
+msgstr "Correo electrónico verificado"
+
+#: .\users\models.py:15 .\users\templates\users\user_detail.html:18
+msgid "Username"
+msgstr "Nombre de usuario"
+
+#: .\users\templates\users\user_detail.html:11
+msgid "User Detail"
+msgstr "Detalles del usuario"
+
+#: .\users\templates\users\user_detail.html:20
+msgid "Email"
+msgstr "Correo electrónico"

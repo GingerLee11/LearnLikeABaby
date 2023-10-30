@@ -10,6 +10,10 @@ class HomePageView(TemplateView):
     template_name = "home.html"
 
 
+class JapaneseHomeView(TemplateView):
+    template_name = "japanese/japanese_home.html"
+
+
 class RegisterView(generic.CreateView):
     form_class = CustomUserCreationForm
     success_url = reverse_lazy('home')

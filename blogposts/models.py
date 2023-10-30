@@ -25,8 +25,8 @@ class BlogPost(models.Model):
     """
     title = models.CharField(_("Title"), max_length=150)
     sub_title = models.CharField(_("Sub-title"), max_length=300, blank=True, null=True)
-    category = models.ManyToManyField("Category")
-    language = models.ManyToManyField("Language")
+    category = models.ManyToManyField("Category", blank=True)
+    language = models.ManyToManyField("Language", help_text="What languages is this blogpost available in?")
     author = models.ForeignKey(User, on_delete=models.SET_NULL, blank=True, null=True)
     date_published = models.DateTimeField(_("Published"), auto_now_add=True)
     date_modified = models.DateTimeField(_("Last Modified"), auto_now=True)

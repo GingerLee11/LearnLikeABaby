@@ -1,11 +1,12 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Blog Posts{% endblock title %}
+{% block title %}{% trans "Blog Posts" %}{% endblock title %}
 
 {% block content %}
   <div class="container-md">
     <div class="text-center">
-        <h1 class="my-3">Blog Posts</h1>
+        <h1 class="my-3">{% trans "Blog Posts" %}</h1>
     </div>
     <div class="list-group">
       {% for blog_post in object_list %}
@@ -23,13 +24,13 @@
             {% endif %}
             {{ blog_post.date_modified|date:"d M Y" }}
             <div>
-                Languages:
+                {% trans "Article available in the following languages" %}:
                 {% for lang in blog_post.language.all %}
-                  <span class="">{{ lang.name }}</span>
+                  {{ lang }}{% if not forloop.last %}, {% endif %}
                 {% endfor %}
             </div>
             <div>
-                Categories:
+                {% trans "Categories" %}:
                 {% for cat in blog_post.category.all %}
                   <span class="">{{ cat.name }}</span>
                 {% endfor %}
@@ -37,7 +38,7 @@
           </small>
         </a>
       {% empty %}
-        <li id="empty-list" class="list-group-item">No blog posts yet.</li>
+        <li id="empty-list" class="list-group-item">{% trans "No blog posts yet." %}</li>
       {% endfor %}
     </div>
   </div>

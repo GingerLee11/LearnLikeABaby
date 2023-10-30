@@ -45,6 +45,7 @@ AUTHENTICATION_BACKENDS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'modeltranslation',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -87,6 +88,7 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                'django.template.context_processors.i18n',
             ],
         },
     },
@@ -145,9 +147,9 @@ USE_TZ = True
 
 USE_L10N = True
 
-LOCALE = [
-    BASE_DIR / 'locale/'
-]
+LOCALE_PATHS = (
+    BASE_DIR / 'locale/',
+)
 
 
 # Static files (CSS, JavaScript, Images)

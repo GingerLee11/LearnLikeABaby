@@ -1,27 +1,28 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
-{% block title %}Learn Japanese Like A Baby{% endblock title %}
+{% block title %}{% trans "Learn Japanese Like A Baby" %}{% endblock title %}
 
 {% block content %}
 <div class="container-md">
     <div class="text-center">
-        <h1 class="my-3">Learn Japanese Like A Baby</h1>
+        <h1 class="my-3">{% trans "Learn Japanese Like A Baby" %}</h1>
         <p class="lead">日本語の世界へようこそ！</p>
-        <p>Welcome to the Japanese Language journey, where you'll learn like a baby—curious, unafraid, and step-by-step.</p>
+        <p>{% trans "Welcome to your Japanese Language journey, where you'll learn like a baby—curious, unafraid, and step-by-step." %}</p>
     </div>
 
     <!-- Levels -->
     <div class="row justify-content-center my-5">
         <div class="col-md-10">
-            <h2>Choose Your Level</h2>
+            <h2>{% trans "Choose Your Level" %}</h2>
             <div class="row">
                 <!-- Japanese Language Baby -->
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Japanese Language Baby - 日本語の赤ちゃん (Mimic ages 0 - 1 or 2)</h5>
-                            <p class="card-text">Your job is to listen and watch as much as you can. Be a curious sponge!</p>
-                            <a href="#" class="btn btn-primary">Start Learning</a>
+                            <h5 class="card-title">{% trans "Japanese Language Baby" %} - 日本語の赤ちゃん {% trans "(Mimic ages 0 - 1)" %}</h5>
+                            <p class="card-text">{% trans "Your job is to listen and watch as much as you can. Be a curious sponge!" %}</p>
+                            <a href="#" class="btn btn-primary">{% trans "Start Learning" %}</a>
                         </div>
                     </div>
                 </div>
@@ -30,9 +31,9 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Japanese Language Toddler - 日本語の幼児 (Mimic ages 1 or 2 - 5 or 6)</h5>
-                            <p class="card-text">Start interacting with the world. Learn basic words and concepts.</p>
-                            <a href="#" class="btn btn-primary">Start Learning</a>
+                            <h5 class="card-title">{% trans "Japanese Language Toddler" %} - 日本語の幼児 {% trans "(Mimic ages 1 - 5)" %}</h5>
+                            <p class="card-text">{% trans "Start interacting with the world. Learn basic words and concepts." %}</p>
+                            <a href="#" class="btn btn-primary">{% trans "Start Learning" %}</a>
                         </div>
                     </div>
                 </div>
@@ -41,9 +42,9 @@
                 <div class="col-md-4">
                     <div class="card">
                         <div class="card-body">
-                            <h5 class="card-title">Japanese Language Child - 日本語の子供 (Mimic ages 5 or 6 - 10)</h5>
-                            <p class="card-text">Aim for full conversational fluency and learn to read Hiragana and Katakana.</p>
-                            <a href="#" class="btn btn-primary">Start Learning</a>
+                            <h5 class="card-title">{% trans "Japanese Language Child" %} - 日本語の子供 {% trans "(Mimic ages 5 - 10)" %}</h5>
+                            <p class="card-text">{% trans "Aim for full conversational fluency and learn to read Hiragana and Katakana." %}</p>
+                            <a href="#" class="btn btn-primary">{% trans "Start Learning" %}</a>
                         </div>
                     </div>
                 </div>
@@ -54,11 +55,11 @@
     <!-- Resources -->
     <div class="row justify-content-center my-5">
         <div class="col-md-10">
-            <h2>Resources</h2>
+            <h2>{% trans "Resources" %}</h2>
             <ul class="list-group">
-                <a href="#" class="list-group-item list-group-item-action">Shows to Watch</a>
-                <a href="#" class="list-group-item list-group-item-action">Books to Read</a>
-                <a href="#" class="list-group-item list-group-item-action">YouTube Channels</a>
+                <a href="#" class="list-group-item list-group-item-action">{% trans "Shows to Watch" %}</a>
+                <a href="#" class="list-group-item list-group-item-action">{% trans "Books to Read" %}</a>
+                <a href="#" class="list-group-item list-group-item-action">{% trans "YouTube Channels" %}</a>
             </ul>
         </div>
     </div>

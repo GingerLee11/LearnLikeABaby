@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-29 19:35-0400\n"
+"POT-Creation-Date: 2023-10-29 22:13-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,7 @@ msgstr "다른 언어 선택"
 
 #: .\blogposts\templates\blogposts\blogpost_list.html:4
 #: .\blogposts\templates\blogposts\blogpost_list.html:9
-#: .\blogsite\templates\base.html:28
+#: .\blogsite\templates\base.html:27
 msgid "Blog Posts"
 msgstr "블로그 게시물"
 
@@ -84,34 +84,30 @@ msgstr "스페인어"
 msgid "Korean"
 msgstr "한국어"
 
-#: .\blogsite\templates\base.html:13 .\blogsite\templates\base.html:21
+#: .\blogsite\templates\base.html:12 .\blogsite\templates\base.html:20
 #: .\blogsite\templates\home.html:4 .\blogsite\templates\home.html:9
 msgid "Learn Like A Baby"
 msgstr "아기처럼 배우기"
 
-#: .\blogsite\templates\base.html:35
+#: .\blogsite\templates\base.html:34
 msgid "User"
 msgstr "사용자"
 
-#: .\blogsite\templates\base.html:38 .\users\templates\users\user_detail.html:6
+#: .\blogsite\templates\base.html:37 .\users\templates\users\user_detail.html:6
 msgid "Account Page"
 msgstr "계정 페이지"
 
-#: .\blogsite\templates\base.html:40
+#: .\blogsite\templates\base.html:39
 msgid "Logout"
 msgstr "로그아웃"
 
-#: .\blogsite\templates\base.html:44
+#: .\blogsite\templates\base.html:43
 msgid "Login"
 msgstr "로그인"
 
-#: .\blogsite\templates\home.html:14
-msgid "A blog about language learning. Why like a baby?"
-msgstr "언어 학습에 대한 블로그. 왜 아기처럼 하나요?"
-
-#: .\blogsite\templates\home.html:20
-msgid "What language has caught your fancy?"
-msgstr "어떤 언어가 당신의 관심을 끌었나요?"
+#: .\blogsite\templates\base.html:66W
+msgid "Change language"
+msgstr "다른 언어 선택"
 
 #: .\blogsite\templates\home.html:14
 msgid ""
@@ -129,14 +125,22 @@ msgstr ""
 "                아기처럼 배울 때는 호기심이 많고 실패를 두려워하지 않아요.\n"
 "                "
 
+#: .\blogsite\templates\home.html:20
+msgid "What language has caught your fancy?"
+msgstr "어떤 언어가 당신의 관심을 끌었나요?"
+
 #: .\blogsite\templates\japanese\japanese_home.html:4
 #: .\blogsite\templates\japanese\japanese_home.html:9
 msgid "Learn Japanese Like A Baby"
 msgstr "아기처럼 일본어 배우기"
 
 #: .\blogsite\templates\japanese\japanese_home.html:11
-msgid "Welcome to your Japanese Language journey, where you'll learn like a baby—curious, unafraid, and step-by-step."
-msgstr "아기처럼 궁금하고 두려움 없이 단계적으로 배울 수 있는 일본어 여행에 오신 것을 환영합니다."
+msgid ""
+"Welcome to your Japanese Language journey, where you'll learn like a baby—"
+"curious, unafraid, and step-by-step."
+msgstr ""
+"아기처럼 궁금하고 두려움 없이 단계적으로 배울 수 있는 일본어 여행에 오신 것"
+"을 환영합니다."
 
 #: .\blogsite\templates\japanese\japanese_home.html:17
 msgid "Choose Your Level"
@@ -151,7 +155,8 @@ msgid "(Mimic ages 0 - 1)"
 msgstr "(0 - 1세 흉내내기)"
 
 #: .\blogsite\templates\japanese\japanese_home.html:24
-msgid "Your job is to listen and watch as much as you can. Be a curious sponge!"
+msgid ""
+"Your job is to listen and watch as much as you can. Be a curious sponge!"
 msgstr "가능한 많이 듣고 보세요. 호기심 많은 스펀지처럼!"
 
 #: .\blogsite\templates\japanese\japanese_home.html:25
@@ -181,7 +186,8 @@ msgid "(Mimic ages 5 - 10)"
 msgstr "(5 - 10세 흉내내기)"
 
 #: .\blogsite\templates\japanese\japanese_home.html:46
-msgid "Aim for full conversational fluency and learn to read Hiragana and Katakana."
+msgid ""
+"Aim for full conversational fluency and learn to read Hiragana and Katakana."
 msgstr "완전한 회화 능력과 히라가나, 카타카나 읽기를 목표로해요."
 
 #: .\blogsite\templates\japanese\japanese_home.html:58

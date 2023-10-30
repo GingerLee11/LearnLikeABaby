@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-29 19:36-0400\n"
+"POT-Creation-Date: 2023-10-29 22:13-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,7 @@ msgstr "別の言語を選択"
 
 #: .\blogposts\templates\blogposts\blogpost_list.html:4
 #: .\blogposts\templates\blogposts\blogpost_list.html:9
-#: .\blogsite\templates\base.html:28
+#: .\blogsite\templates\base.html:27
 msgid "Blog Posts"
 msgstr "ブログ記事"
 
@@ -84,26 +84,30 @@ msgstr "スペイン語"
 msgid "Korean"
 msgstr "韓国語"
 
-#: .\blogsite\templates\base.html:13 .\blogsite\templates\base.html:21
+#: .\blogsite\templates\base.html:12 .\blogsite\templates\base.html:20
 #: .\blogsite\templates\home.html:4 .\blogsite\templates\home.html:9
 msgid "Learn Like A Baby"
 msgstr "赤ちゃんのように学ぼう"
 
-#: .\blogsite\templates\base.html:35
+#: .\blogsite\templates\base.html:34
 msgid "User"
 msgstr "ユーザー"
 
-#: .\blogsite\templates\base.html:38 .\users\templates\users\user_detail.html:6
+#: .\blogsite\templates\base.html:37 .\users\templates\users\user_detail.html:6
 msgid "Account Page"
 msgstr "アカウントページ"
 
-#: .\blogsite\templates\base.html:40
+#: .\blogsite\templates\base.html:39
 msgid "Logout"
 msgstr "ログアウト"
 
-#: .\blogsite\templates\base.html:44
+#: .\blogsite\templates\base.html:43
 msgid "Login"
 msgstr "ログイン"
+
+#: .\blogsite\templates\base.html:66
+msgid "Change language"
+msgstr "別の言語を選択"
 
 #: .\blogsite\templates\home.html:14
 msgid ""
@@ -134,8 +138,7 @@ msgstr "赤ちゃんのように日本語を学ぼう"
 msgid ""
 "Welcome to your Japanese Language journey, where you'll learn like a baby—"
 "curious, unafraid, and step-by-step."
-msgstr ""
-"赤ちゃんのように好奇心を持って、恐れず、一歩一歩日本語の旅へようこそ。"
+msgstr "赤ちゃんのように好奇心を持って、恐れず、一歩一歩日本語の旅へようこそ。"
 
 #: .\blogsite\templates\japanese\japanese_home.html:17
 msgid "Choose Your Level"
@@ -152,8 +155,7 @@ msgstr "(模倣年齢 0 - 1)"
 #: .\blogsite\templates\japanese\japanese_home.html:24
 msgid ""
 "Your job is to listen and watch as much as you can. Be a curious sponge!"
-msgstr ""
-"できるだけ多く聞いて見てください。好奇心旺盛なスポンジになりましょう！"
+msgstr "できるだけ多く聞いて見てください。好奇心旺盛なスポンジになりましょう！"
 
 #: .\blogsite\templates\japanese\japanese_home.html:25
 #: .\blogsite\templates\japanese\japanese_home.html:36
@@ -184,8 +186,7 @@ msgstr "(模倣年齢 5 - 10)"
 #: .\blogsite\templates\japanese\japanese_home.html:46
 msgid ""
 "Aim for full conversational fluency and learn to read Hiragana and Katakana."
-msgstr ""
-"日常会話のレベルを目指し、ひらがなとカタカナの読み書きを学びましょう。"
+msgstr "日常会話のレベルを目指し、ひらがなとカタカナの読み書きを学びましょう。"
 
 #: .\blogsite\templates\japanese\japanese_home.html:58
 msgid "Resources"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-29 19:36-0400\n"
+"POT-Creation-Date: 2023-10-29 22:13-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -52,7 +52,7 @@ msgstr "Selecciona otro idioma"
 
 #: .\blogposts\templates\blogposts\blogpost_list.html:4
 #: .\blogposts\templates\blogposts\blogpost_list.html:9
-#: .\blogsite\templates\base.html:28
+#: .\blogsite\templates\base.html:27
 msgid "Blog Posts"
 msgstr "Publicaciones del blog"
 
@@ -84,26 +84,30 @@ msgstr "Español"
 msgid "Korean"
 msgstr "Coreano"
 
-#: .\blogsite\templates\base.html:13 .\blogsite\templates\base.html:21
+#: .\blogsite\templates\base.html:12 .\blogsite\templates\base.html:20
 #: .\blogsite\templates\home.html:4 .\blogsite\templates\home.html:9
 msgid "Learn Like A Baby"
 msgstr "Aprende como un bebé"
 
-#: .\blogsite\templates\base.html:35
+#: .\blogsite\templates\base.html:34
 msgid "User"
 msgstr "Usuario"
 
-#: .\blogsite\templates\base.html:38 .\users\templates\users\user_detail.html:6
+#: .\blogsite\templates\base.html:37 .\users\templates\users\user_detail.html:6
 msgid "Account Page"
 msgstr "Página de cuenta"
 
-#: .\blogsite\templates\base.html:40
+#: .\blogsite\templates\base.html:39
 msgid "Logout"
 msgstr "Cerrar sesión"
 
-#: .\blogsite\templates\base.html:44
+#: .\blogsite\templates\base.html:43
 msgid "Login"
 msgstr "Iniciar sesión"
+
+#: .\blogsite\templates\base.html:66
+msgid "Change language"
+msgstr "Selecciona otro idioma"
 
 #: .\blogsite\templates\home.html:14
 msgid ""
@@ -116,10 +120,12 @@ msgid ""
 "                "
 msgstr ""
 "\n"
-"                Un blog sobre el aprendizaje de idiomas. ¿Por qué como un bebé? \n"
-"                El proceso de aprendizaje de idiomas a menudo se ve obstaculizado por "
-"ideas preconcebidas y malos hábitos; \n"
-"                cuando aprendes como un bebé, eres curioso y no tienes miedo al fracaso.\n"
+"                Un blog sobre el aprendizaje de idiomas. ¿Por qué como un "
+"bebé? \n"
+"                El proceso de aprendizaje de idiomas a menudo se ve "
+"obstaculizado por ideas preconcebidas y malos hábitos; \n"
+"                cuando aprendes como un bebé, eres curioso y no tienes miedo "
+"al fracaso.\n"
 "                "
 
 #: .\blogsite\templates\home.html:20
@@ -132,8 +138,12 @@ msgid "Learn Japanese Like A Baby"
 msgstr "Aprende japonés como un bebé"
 
 #: .\blogsite\templates\japanese\japanese_home.html:11
-msgid "Welcome to your Japanese Language journey, where you'll learn like a baby—curious, unafraid, and step-by-step."
-msgstr "Bienvenido a tu viaje de aprendizaje del idioma japonés, donde aprenderás como un bebé: curioso, sin miedo y paso a paso."
+msgid ""
+"Welcome to your Japanese Language journey, where you'll learn like a baby—"
+"curious, unafraid, and step-by-step."
+msgstr ""
+"Bienvenido a tu viaje de aprendizaje del idioma japonés, donde aprenderás "
+"como un bebé: curioso, sin miedo y paso a paso."
 
 #: .\blogsite\templates\japanese\japanese_home.html:17
 msgid "Choose Your Level"
@@ -148,8 +158,11 @@ msgid "(Mimic ages 0 - 1)"
 msgstr "(Imita las edades de 0 a 1)"
 
 #: .\blogsite\templates\japanese\japanese_home.html:24
-msgid "Your job is to listen and watch as much as you can. Be a curious sponge!"
-msgstr "Tu trabajo es escuchar y observar todo lo que puedas. ¡Sé una esponja curiosa!"
+msgid ""
+"Your job is to listen and watch as much as you can. Be a curious sponge!"
+msgstr ""
+"Tu trabajo es escuchar y observar todo lo que puedas. ¡Sé una esponja "
+"curiosa!"
 
 #: .\blogsite\templates\japanese\japanese_home.html:25
 #: .\blogsite\templates\japanese\japanese_home.html:36
@@ -167,7 +180,8 @@ msgstr "(Imita las edades de 1 a 5)"
 
 #: .\blogsite\templates\japanese\japanese_home.html:35
 msgid "Start interacting with the world. Learn basic words and concepts."
-msgstr "Comienza a interactuar con el mundo. Aprende palabras y conceptos básicos."
+msgstr ""
+"Comienza a interactuar con el mundo. Aprende palabras y conceptos básicos."
 
 #: .\blogsite\templates\japanese\japanese_home.html:45
 msgid "Japanese Language Child"
@@ -178,8 +192,11 @@ msgid "(Mimic ages 5 - 10)"
 msgstr "(Imita las edades de 5 a 10)"
 
 #: .\blogsite\templates\japanese\japanese_home.html:46
-msgid "Aim for full conversational fluency and learn to read Hiragana and Katakana."
-msgstr "Apunta a tener una fluidez conversacional completa y aprende a leer Hiragana y Katakana."
+msgid ""
+"Aim for full conversational fluency and learn to read Hiragana and Katakana."
+msgstr ""
+"Apunta a tener una fluidez conversacional completa y aprende a leer Hiragana "
+"y Katakana."
 
 #: .\blogsite\templates\japanese\japanese_home.html:58
 msgid "Resources"

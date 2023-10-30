@@ -1,13 +1,14 @@
 {% extends 'base.html' %}
+{% load i18n %}  
 
 {% load crispy_forms_tags %}
 
-{% block title %}Login{% endblock title %}
+{% block title %}{% trans "Login" %}{% endblock title %}
 
 {% block content %}
 <div class="container-md">
     <div class="text-center mt-5">
-        <h1 class="mb-4">Login</h1>
+        <h1 class="mb-4">{% trans "Login" %}</h1>
     </div>
     <div class="row justify-content-center">
         <div class="col-md-6">
@@ -17,12 +18,12 @@
                         {% csrf_token %}
                         {{ form|crispy }}
                         <input type="hidden" name="next" value="{{ next }}" />
-                        <button type="submit" class="btn btn-primary">Login</button>
+                        <button type="submit" class="btn btn-primary">{% trans "Login" %}</button>
                     </form>
                 </div>
             </div>
             <div class="text-center mt-3">
-                <p>Don't have an account? <a href="{% url 'register' %}">Register</a></p>
+                <p>{% trans "Don't have an account?" %} <a href="{% url 'register' %}">{% trans "Register" %}</a></p>
             </div>
         </div>
     </div>

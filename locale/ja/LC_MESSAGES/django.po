@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-10-29 22:13-0400\n"
+"POT-Creation-Date: 2023-10-30 12:43-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -102,6 +102,9 @@ msgid "Logout"
 msgstr "ログアウト"
 
 #: .\blogsite\templates\base.html:43
+#: .\blogsite\templates\registration\login.html:6
+#: .\blogsite\templates\registration\login.html:11
+#: .\blogsite\templates\registration\login.html:21
 msgid "Login"
 msgstr "ログイン"
 
@@ -203,6 +206,21 @@ msgstr "読むべき本"
 #: .\blogsite\templates\japanese\japanese_home.html:62
 msgid "YouTube Channels"
 msgstr "YouTubeチャンネル"
+
+#: .\blogsite\templates\registration\login.html:26
+msgid "Don't have an account?"
+msgstr "アカウント持ってない方へ："
+
+#: .\blogsite\templates\registration\login.html:26
+#: .\blogsite\templates\registration\register.html:6
+#: .\blogsite\templates\registration\register.html:11
+#: .\blogsite\templates\registration\register.html:20
+msgid "Register"
+msgstr "登録"
+
+#: .\users\forms.py:11
+msgid "Email address / Username"
+msgstr "メールアドレス・ユーザー名"
 
 #: .\users\models.py:13
 msgid "Email Address"

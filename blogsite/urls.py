@@ -34,6 +34,8 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
     path('', views.HomePageView.as_view(), name='home'),
     path('japanese/', views.JapaneseHomeView.as_view(), name='japanese-home'),
+    path('japanese/baby/', views.JapaneseBabyView.as_view(), name='japanese-baby'),
+    path('japanese/resources/', views.JapaneseResourcesView.as_view(), name='japanese-resources'),
     path('blog/', include('blogposts.urls')),
     path('users/', include('users.urls')),
     path('summernote/', include('django_summernote.urls')),

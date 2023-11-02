@@ -9,9 +9,18 @@ from users.forms import CustomUserCreationForm
 class HomePageView(TemplateView):
     template_name = "home.html"
 
+# Japanese views:
 
 class JapaneseHomeView(TemplateView):
     template_name = "japanese/japanese_home.html"
+
+
+class JapaneseBabyView(TemplateView):
+    template_name = "japanese/japanese_baby.html"
+
+
+class JapaneseResourcesView(TemplateView):
+    template_name = "japanese/japanese_resources.html"
 
 
 class RegisterView(generic.CreateView):

@@ -1,0 +1,301 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+
+{% block title %}{% trans "Japanese Learning Resources" %}{% endblock title %}
+
+{% block content %}
+<div class="container-md">
+    <div class="text-center">
+        <h1 class="my-3">{% trans "Japanese Learning Resources" %}</h1>
+        <p class="lead">{% trans "It's dangerous to go alone! Take this." %}</p>
+    </div>
+
+    <!-- Side Navigation and Content -->
+    <div class="row">
+        <!-- Side Navigation -->
+        <div class="col-sm-2 d-none d-sm-block">
+            <nav id="resource-side-navbar" class="navbar navbar-light bg-light position-sticky" style="top: 100px;">
+                <nav class="nav nav-pills flex-column">
+                    <a class="nav-link" href="#websites">{% trans "Websites" %}</a>
+                    <a class="nav-link" href="#youtube">{% trans "YouTube Channels" %}</a>
+                    <a class="nav-link" href="#podcasts">{% trans "Podcasts" %}</a>
+                    <a class="nav-link" href="#dramas">{% trans "Dramas" %}</a>
+                    <a class="nav-link" href="#animes">{% trans "Animes" %}</a>
+                    {% comment "Add sections later" %}
+                    <a class="nav-link" href="#music">{% trans "Music" %}</a>
+                    <a class="nav-link" href="#apps">{% trans "Apps" %}</a>
+                    <a class="nav-link" href="#games">{% trans "Games" %}</a>
+                    <a class="nav-link" href="#books">{% trans "Mangas/Books" %}</a>
+                    <a class="nav-link" href="#grammar">{% trans "Grammar" %}</a>
+                    {% endcomment %}
+                </nav>
+            </nav>
+        </div>
+
+        <!-- Content -->
+        <div class="col-sm-10">
+            {% url 'japanese-baby' as japanese_baby_url %}
+            <!-- Websites for Learning Japanese -->
+            <section id="websites">
+                <h2>{% trans "Websites for Learning Japanese" %}</h2>
+                <p>{% blocktrans %}Embarking on a journey to learn Japanese? Well, you're in luck! The internet is a treasure trove of resources, and I've handpicked some of the best websites that align with my philosophy of learning like a baby. These sites are not just informative but also engaging, making your learning process as natural and enjoyable as possible. So, let's dive in!{% endblocktrans %}</p>
+
+                <!-- Animelon -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://animelon.com/" target="_blank">{% trans "Animelon" %}</a></h5>
+                        <p>{% blocktrans %}
+                            For all you anime enthusiasts out there (don't be shy, I know you're out there), Animelon is your go-to platform for learning Japanese through anime. I've curated a list of anime <a href="#animes">below</a>, which can serve as excellent learning tools in addition to making you laugh (and maybe shed a tear or two).
+                            {% endblocktrans %}
+                        </p>
+                        <h6>{% trans "How to Use Animelon Effectively:" %}</h6>
+                        <!-- Insert blog post link when available -->
+                        <p>{% blocktrans %}
+                            This advice applies to learners at all levels but is particularly beneficial for those at the Japanese Language Baby stage. 
+                            Choose an anime that piques your interest, read its summary in your native language for context, and then watch it without subtitles. 
+                            Trust me, it's a game-changer. <a href="#" target="_blank">Here's why this method works wonders.</a>
+                            {% endblocktrans %}
+                        </p>
+                        <p>{% blocktrans %}
+                            The goal isn't to understand every word but to familiarize your brain with the sound of the Japanese language. 
+                            Your brain needs to recognize these sounds as meaningful, prompting it to allocate mental resources to understand them. 
+                            But beware, our brains are inherently lazy! Using subtitles in your native language will only <a href="#">hinder this process.</a> 
+                            My advice? Go all in, but in short bursts to avoid mental fatigue. The <a href="https://pomofocus.io/" target="_blank">Pomodoro Technique</a> is your friend here.
+                            {% endblocktrans %}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Tofugu -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://www.tofugu.com/" target="_blank">{% trans "Tofugu" %}</a></h5>
+                        <p>{% blocktrans %}
+                            Tofugu is a comprehensive resource that I've found invaluable in my own learning journey. 
+                            While the site offers a plethora of information, my approach aims for rapid fluency with a native-like accent. 
+                            I do NOT recommend learning Hiragana first, but I still think that Tofugu has the best guide to learning Hiragana so I will leave a link <a href="https://www.tofugu.com/japanese/learn-hiragana/" target="_blank">here</a>. 
+                            {% endblocktrans %}</p>
+                        <!-- Insert Hiragana guide link when available -->
+                        <h6>{% trans "What's wrong with Hiragana?" %}</h6>
+                        <p>{% blocktrans %}
+                            I have nothing against Hiragana, and you may eventually wish that everything was written in Hiragana when you start takling Kanji (I'm not saying we should get rid of Kanji either, relax); 
+                            however, I do advocate learning basic words through observation and listening before diving into writing and reading (Hiragana and Katakana AND Kanji) even if reading and writing are your preferred methods of language acquisition.
+                            Babies don't start by reading and writing, so why should language learners? 
+                            <a href="#">Here's my detailed take on this.</a>
+                            {% endblocktrans %}
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Nihongonomori -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://nihongonomori.com/" target="_blank">{% trans "Nihongonomori" %}</a></h5>
+                        <p>{% blocktrans %}
+                            Originally a YouTube channel, Nihongonomori has expanded into a full-fledged website. 
+                            Their approach has some similarities to my philosophy, although there are unique aspects in my <a href="{{ japanese_baby_url }}">Japanese Language Baby</a> series that you won't find there.
+                            {% endblocktrans %}
+                        </p>
+                        <!-- Insert Japanese Language Baby link when available -->
+                        <h6>{% trans "Why I like Nihongonomori:" %}</h6>
+                        <p>{% blocktrans %}
+                            Their YouTube channel is a gem, especially the videos by Yuka sensei. 
+                            Her energetic teaching style is both engaging and educational. 
+                            More on their YouTube channel in the YouTube section.
+                            {% endblocktrans %}
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- YouTube Channels for Learning Japanese -->
+            <section id="youtube">
+                <h2>{% trans "YouTube Channels for Learning Japanese" %}</h2>
+                <p>{% blocktrans %}YouTube has been an indispensable tool in my language learning journey. The platform offers a wealth of resources, making it easier than ever to immerse yourself in the language. Whether you're a beginner or an advanced learner, you'll find channels that suit your needs and help you grow. Here are some of my top recommendations:{% endblocktrans %}</p>
+
+                <!-- Nihongonomori -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://youtube.com/@nihongonomori2013" target="_blank">日本語の森 - {% trans "Nihongonomori" %}</a></h5>
+                        <p>{% blocktrans %}This channel is a goldmine for Japanese learners, offering content that caters to all levels—from absolute beginners to those aiming for N1, the highest level of the Japanese Language Proficiency Test (JLPT). Their live sessions provide an interactive platform where you can engage with the instructors, who are incredibly helpful and kind. I can't recommend this channel enough.{% endblocktrans %}</p>
+                    </div>
+                </div>
+
+                <!-- MariMariMarie -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://www.youtube.com/channel/UCOnA15zQ7OafLsnN8J-CMvg" target="_blank">マリマリマリー ({% trans "MariMariMarie" %})</a></h5>
+                        <p>{% blocktrans %}Breaking away from the traditional educational channels, this one offers a unique experience. It features animated shorts that give you a glimpse into Japanese humor. While not explicitly designed for non-native speakers, it aligns perfectly with my "learn like a baby" philosophy. The humor might initially be hard to grasp, especially for beginners, but the short 3-5 minute videos make it easy to rewatch and absorb the content. Patience is key here.{% endblocktrans %}</p>
+                    </div>
+                </div>
+
+                <!-- Kurzgesagt Japanese Channel -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://www.youtube.com/@kurzgesagt_jp" target="_blank">世界をわかりやすく - {% trans "Kurzgesagt Japanese Channel" %}</a></h5>
+                        <p>{% blocktrans %}If you haven't discovered Kurzgesagt yet, consider this your introduction. Known for their visually stunning and intellectually stimulating content; their videos are a feast for the mind. While the subject matter is advanced, I recommend watching the video in your native language first, and then attempting the Japanese version without subtitles. As of November 1, 2023, they offer content in multiple languages, including Japanese.{% endblocktrans %}</p>
+                    </div>
+                </div>
+
+                <!-- Akane's Japanese Classroom -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://youtube.com/@Akane-JapaneseClass" target="_blank">あかね的日本語教育 - {% trans "Akane's Japanese Classroom" %}</a></h5>
+                        <p>{% blocktrans %}Akane's channel is a well-rounded resource, especially if you're interested in the day-to-day life in Japan. She offers a variety of videos, including vlogs and vocabulary lessons that you'd find useful if you were living in Japan.{% endblocktrans %}</p>
+                    </div>
+                </div>
+
+                <!-- Easy Japanese -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://www.youtube.com/playlist?list=PLA5UIoabheFO87Zs0a2W-5ZMzWBjhg_Ap" target="_blank">{% trans "Easy Japanese" %}</a></h5>
+                        <p>{% blocktrans %}This isn't a standalone channel but a playlist within the Easy Languages channel. It's a valuable resource, especially if your exposure to Japanese has been primarily through anime or dramas. The playlist features street interviews and offers a more authentic experience of spoken Japanese. However, it lacks a structured learning path and is best used as a supplementary listening resource. One downside is the inability to hide the English subtitles, which can be a crutch for those who are more proficient in English.{% endblocktrans %}</p>
+                    </div>
+                </div>
+
+                <!-- Sambon Juku -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://youtube.com/@sambonjuku" target="_blank">三本塾 - {% trans "Sambon Juku" %}</a></h5>
+                        <p>{% blocktrans %}While I personally haven't spent much time on this channel, it's worth noting for its focus on grammar. It's particularly useful for those who are already conversationally fluent and are considering taking the JLPT at levels N3, N2, or N1.{% endblocktrans %}</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Podcasts for Learning Japanese -->
+            <section id="podcasts">
+                <h2>{% trans "Podcasts for Learning Japanese" %}</h2>
+                <p>{% blocktrans %}
+                    Podcasts offer a unique avenue for language acquisition, particularly in honing your listening skills. While traditional advice often suggests waiting until you reach an intermediate level to dive into podcasts, I advocate for incorporating them into your learning journey from day one. The absence of visual cues forces you to focus solely on auditory input, helping your brain adapt to the language's sounds and patterns. Initially, this might feel overwhelming, but the key is to let go of the need to understand every word. Instead, aim to familiarize yourself with the language's rhythm and intonation. To maximize the benefits, complement podcast listening with resources that offer visual context, gradually increasing your comprehension over time. I'll be elaborating on this approach in an upcoming blog post, so stay tuned!
+                {% endblocktrans %}</p>
+
+                <!-- Coten Radio -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy84YzIwODhjL3BvZGNhc3QvcnNz?sa=X&ved=0CAMQ4aUDahcKEwjgkuvKqKOCAxUAAAAAHQAAAAAQDg" target="_blank">歴史を面白く学ぶコテンラジオ (Coten Radio")</a></h5>
+                        <p>{% blocktrans %}
+                            Coten Radio is more than just a tool for learning Japanese; it's a captivating journey through history. The podcast features a diverse range of historical stories, presented in an engaging and accessible manner. Whether you're a history buff like me or new to the subject, you'll find the content surprisingly compelling. This isn't some obscure podcast either; it has received accolades such as the Japan Podcast Awards Grand Prize and the Spotify Prize, attesting to the quality and depth of its content.
+                        {% endblocktrans %}</p>
+                        <h6>{% trans "Note:" %}</h6>
+                        <p>{% blocktrans %}
+                            The podcast is quite advanced, tackling topics that even native Japanese speakers might find challenging. However, one of the regular contributors is a self-proclaimed history "novice," ensuring that the discussions remain accessible. The hosts generally assume that listeners have little to no prior knowledge of the topics at hand, although they occasionally reference previous episodes for context.
+                        {% endblocktrans %}</p>
+                    </div>
+                </div>
+
+                <!-- The Real Japanese Podcast by Haruka -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://podcasts.google.com/feed/aHR0cHM6Ly9hbmNob3IuZm0vcy8yNmFlYzRmYy9wb2RjYXN0L3Jzcw==" target="_blank">{% trans "The Real Japanese Podcast by Haruka" %}</a></h5>
+                        <p>{% blocktrans %}
+                            Haruka's podcast offers a genuine glimpse into the Japanese language and culture. It's an excellent resource for learners who are looking for authentic, native-level content. What sets this podcast apart is Haruka's involvement in the language learning community; she even hosts meetups for Japanese learners in Japan, providing a unique opportunity for immersive learning.
+                        {% endblocktrans %}</p>
+                        <h6>{% trans "Website:" %}</h6>
+                        <p><a href="https://www.haru-no-nihongo.com/" target="_blank">{% trans "Haru no Nihongo" %}</a></p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tvdramas">
+                <h2>{% trans "TV Dramas for Learning Japanese" %}</h2>
+                <p>{% trans "TV dramas offer a more realistic exposure to the Japanese language compared to anime, which often features expressions not commonly used in everyday life. While anime is not to be dismissed, balancing your exposure to both can be beneficial. One of my philosophies in language learning is not just to 'learn' the language, but to 'become accustomed' to it. TV dramas provide a window into real-life situations, natural dialogues, and cultural nuances, making them an invaluable resource for anyone looking to become truly proficient in Japanese." %}</p>
+            
+                <!-- 初恋 -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://www.netflix.com/title/81037371" target="_blank">{% trans "初恋 (First Love)" %}</a></h5>
+                        <p>{% trans "First Love is a romantic drama that revolves around the complexities of love and relationships. While the plot itself is engaging, what makes this show particularly useful for Japanese learners is its realistic dialogue and everyday settings. The characters converse in a manner that closely resembles how people actually talk in Japan, making it an excellent resource for picking up natural conversational phrases." %}</p>
+                    </div>
+                </div>
+            
+                <!-- テラスハウス -->
+                <div class="card mb-3">
+                    <div class="card-body">
+                        <h5 class="card-title"><a href="https://www.netflix.com/title/81077005" target="_blank">{% trans "テラスハウス (Terrace House)" %}</a></h5>
+                        <p>{% trans "Terrace House stands out as a unique reality TV show that lacks a script, making the conversations among its participants as real as it gets. This makes it an excellent resource for Japanese learners to get accustomed to how the language is spoken in everyday life. The show's setting and interactions are incredibly relatable, providing a comprehensive look into modern Japanese culture and language." %}</p>
+                    </div>
+                </div>
+            </section>
+            
+            <section id="animes">
+                <h2>{% trans "Animes for Learning Japanese" %}</h2>
+                <p>This list of anime has been curated not just based on personal preferences, but with a focus on their utility for Japanese language learners. These anime series offer a rich variety of content, from everyday conversations and specialized terms to cultural insights. They are all available for viewing on Animelon, which allows for free access and includes features to aid in language learning.</p>
+                <div class="card mb-3">
+                    <div class="card-body">
+
+                        <h3 class="mb-2">Anime List</h3>
+
+                        <h4>うさぎドロップ (Usagi Drop)</h4>
+                        <p><a target="_blank" href="https://animelon.com/series/Usagi%20Drop">Watch on Animelon</a><br>
+                        "Usagi Drop" is an anime that depicts family and parent-child relationships, featuring abundant everyday conversations and interactions within the household. As children are main characters, the Japanese language used is relatively easy to understand, with clear demonstrations of word meanings and usage. The anime also portrays scenes in the workplace, offering a dual opportunity to learn both everyday and professional Japanese.</p>
+
+                        <h4>三月のライオン (March Comes in Like a Lion)</h4>
+                        <p><a target="_blank" href="https://animelon.com/series/3-gatsu%20no%20Lion%20(March%20comes%20in%20like%20a%20lion)">Watch on Animelon</a><br>
+                        "March Comes in Like a Lion" deeply explores human relationships and emotional struggles. It's rich in expressions depicting emotions and states of mind, and also includes specialized terminology related to shogi (Japanese chess). It's particularly recommended for those interested in shogi, offering Japanese learners insights into emotional expressions and specialized vocabulary.</p>
+
+                        <h4>四月は君の嘘 (Your Lie in April)</h4>
+                        <p><a target="_blank" href="https://animelon.com/series/Shigatsu%20wa%20Kimi%20no%20Uso%20(Your%20Lie%20in%20April)">Watch on Animelon</a><br>
+                        "Your Lie in April" is an anime themed around music and romance, portraying the touching story of its protagonists. It's filled with terms related to piano and classical music, making it a special recommendation for music lovers. For Japanese learners, it provides a wealth of emotional conversations and musical terms.</p>
+
+                        <h4>僕だけがいない街 (Erased)</h4>
+                        <p><a target="_blank" href="https://animelon.com/series/Boku%20dake%20ga%20Inai%20Machi%20(ERASED)">Watch on Animelon</a><br>
+                        In "Erased," the protagonist travels back in time to solve a mystery, featuring dialects from Hokkaido and conversations where an adult's knowledge is expressed through a child's body. This offers Japanese learners a unique opportunity to experience both adult and child language usage, making it an excellent resource for learning diverse expressions.</p>
+
+                        <h4>ちはやふる (Chihayafuru)</h4>
+                        <p><a target="_blank" href="https://animelon.com/series/Chihayafuru">Watch on Animelon</a><br>
+                        "Chihayafuru" revolves around competitive karuta (a card game based on Japanese poetry) and explores themes of motivation and aspiration. It's rich in specialized karuta terminology and expressions of youthful emotions, providing insights not only into language learning but also into Japanese culture and the sentiments of youth.</p>
+
+                        <h4>ラブ★コン (Lovely★Complex)</h4>
+                        <p><a target="_blank" href="https://animelon.com/series/Lovely%20Complex">Watch on Animelon</a><br>
+                        "Love Com" is a romance-themed anime characterized by the use of Kansai dialect. It's ideal for learning everyday conversational Japanese related to romance, as well as getting a taste of regional language variations. It offers Japanese learners a chance to study diverse expressions used in romantic contexts and regional dialects.</p>
+
+                        <h4>からかい上手の高木さん (Teasing Master Takagi-san)</h4>
+                        <p><a target="_blank" href="https://animelon.com/series/Karakai%20Jouzu%20no%20Takagi-san%20(Skilled%20Teaser%20Takagi-san)">Watch on Animelon</a><br>
+                        This anime centers around school life and playful teasing, featuring abundant conversations and everyday school language. It allows viewers to experience aspects of Japanese student life and is suitable for learning natural conversation flows and school-related terms.</p>
+
+                        <h4>氷菓 (Hyouka)</h4>
+                        <p><a target="_blank" href="https://animelon.com/series/Hyouka">Watch on Animelon</a><br>
+                        "Hyouka" is a mystery-themed anime with a strong emphasis on logical thinking and expression. The frequently repeated phrase "kininarimasu" (I'm curious) leaves a lasting impression, helping learners remember specific expressions. Although the vocabulary might be challenging, the repetitive situations make it easier to learn certain words and phrases.</p>
+
+                        <h4>坂本ですが？ (Haven't You Heard? I'm Sakamoto)</h4>
+                        <p><a target="_blank" href="https://animelon.com/series/Sakamoto%20desu%20ga">Watch on Animelon</a><br>
+                        "Haven't You Heard? I'm Sakamoto" is an anime with unique humor and characters. While its direct utility for Japanese learning might be debatable, its entertainment value is high, offering an enjoyable way to learn Japanese humor and figurative expressions.</p>
+
+                        <h4>ヲタクに恋は難しい (Wotakoi: Love is Hard for Otaku)</h4>
+                        <p><a target="_blank" href="https://animelon.com/series/Wotaku%20ni%20Koi%20wa%20Muzukashii%20(Wotakoi:%20Love%20is%20Hard%20for%20Otaku)">Watch on Animelon</a><br>
+                        "Wotakoi: Love is Hard for Otaku" depicts otaku culture and romance, featuring workplace conversations and otaku-specific language. It provides insights into contemporary Japanese office life and otaku culture, making it suitable for learners to study modern conversational Japanese and specialized terms.</p>
+
+                    </div>
+                </div>
+            </section>
+            {% comment "Add more sections later" %}
+            <section id="music">
+                <h2>{% trans "Music" %}</h2>
+                <p>{% trans "Description and recommendations..." %}</p>
+            </section>
+
+            <section id="apps">
+                <h2>{% trans "Apps" %}</h2>
+                <p>{% trans "Description and recommendations..." %}</p>
+            </section>
+
+            <section id="games">
+                <h2>{% trans "Games" %}</h2>
+                <p>{% trans "Description and recommendations..." %}</p>
+            </section>
+
+            <section id="books">
+                <h2>{% trans "Mangas and Books" %}</h2>
+                <p>{% trans "Description and recommendations..." %}</p>
+            </section>
+            
+            <section id="grammar">
+                <h2>{% trans "Grammar" %}</h2>
+                <p>{% trans "Description and recommendations..." %}</p>
+            </section>
+            {% endcomment %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

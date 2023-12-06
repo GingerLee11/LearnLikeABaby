@@ -2,6 +2,7 @@ from django.views.generic import TemplateView
 from django.contrib.auth import login
 from django.views import generic
 from django.urls import reverse_lazy
+from django.shortcuts import render
 
 from users.forms import CustomUserCreationForm
 
@@ -17,6 +18,12 @@ class JapaneseHomeView(TemplateView):
 
 class JapaneseBabyView(TemplateView):
     template_name = "japanese/japanese_baby.html"
+
+
+# Block partial views:
+
+def japanese_eating_block(request):
+    return render(request, 'japanese/partials/eating_block.html')
 
 
 class JapaneseResourcesView(TemplateView):

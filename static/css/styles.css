@@ -23,3 +23,12 @@
     left: 10px;
     z-index: 2;
 }
+
+.block-image {
+    transition: transform 0.2s;
+    cursor: pointer;
+}
+
+.block-image:hover {
+    transform: scale(1.05);
+}

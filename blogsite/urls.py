@@ -35,6 +35,7 @@ urlpatterns = [
     path('', views.HomePageView.as_view(), name='home'),
     path('japanese/', views.JapaneseHomeView.as_view(), name='japanese-home'),
     path('japanese/baby/', views.JapaneseBabyView.as_view(), name='japanese-baby'),
+    path('japanese/baby/eating-block', views.japanese_eating_block, name='japanese-eating-block'),
     path('japanese/resources/', views.JapaneseResourcesView.as_view(), name='japanese-resources'),
     path('blog/', include('blogposts.urls')),
     path('users/', include('users.urls')),

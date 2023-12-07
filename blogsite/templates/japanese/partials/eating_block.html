@@ -1,7 +1,65 @@
 {% load i18n %}
 {% load static %}
 
-<div id="eating-block">
-    <h3>{% trans "Eating Block" %}</h3>
-    <!-- Add links to YouTube videos and other resources here -->
+<div id="eating-block" class="py-4">
+    <h2 class="text-center mb-4">{% trans "Let's Learn About Eating!" %}</h2>
+
+    <!-- Introduction Text -->
+    <p class="lead">{% trans "Dive into the delicious world of food and eating habits. Click on any resource below to start learning how to talk about food in Japanese." %}</p>
+
+    <!-- YouTube Videos Section -->
+    <div class="videos-section mb-5">
+        <h3 class="mb-3">{% trans "Watch and Learn" %}</h3>
+        <p>{% trans "Visual learning is a great way to start. Watch these videos to get familiar with common food vocabulary and phrases." %}</p>
+        <!-- Video Thumbnails as Links -->
+        <div class="row">
+            <!-- Loop through video links -->
+            <div class="col-md-10 mb-3" x-data="{ open: false }">
+                <div @click="open = !open" class="video-thumbnail" style="background-image: url('{% static 'images/thumbnails/taberu_video.png' %}')">
+                    <button class="btn btn-play">{% trans "Video 1: Eating in Japanese" %}</button>
+                </div>
+                <div x-show="open" style="display: none;">
+                    <!-- YouTube embed link -->
+                    <iframe width="100%" height="750" src="https://www.youtube.com/embed/sQbUrMq-flk" title="{% trans 'Eating in Japanese' %}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                </div>
+            </div>
+            <!-- Repeat for other videos -->
+        </div>
+    </div>
+
+    <!-- Game Section -->
+    <div class="game-section mb-5">
+        <h3 class="mb-3">{% trans "Interactive Learning Game" %}</h3>
+        <p>{% trans "There is no better way to learn than through immersion. This game is trying to imitate that as best as possible." %}</p>
+
+        <div id="game-container" x-data="gameHandler" data-audio-path="{% static 'audio/' %}">
+            <button x-show="!gameStarted" @click="startGame" class="btn btn-primary mb-3">{% trans "Play Game" %}</button>
+            <p x-show="gameStarted">{% trans "りんごはどこ？" %}</p>
+            <!-- Level 1: Apple -->
+            <div x-show="level === 1" class="game-level">
+                <img src="{% static 'images/ringo.png' %}" alt="{% trans 'Apple' %}" @click="checkItem('ringo')" id="ringo" class="game-item img-fluid block-image">
+            </div>
+        </div>
+    </div>
+
+    <!-- Podcasts Section -->
+    <div class="podcasts-section mb-5">
+        <h3 class="mb-3">{% trans "Podcasts (Coming soon)!" %}</h3>
+        <p>{% trans "Improve your pronunciation and listening skills with these curated podcasts about food." %}</p>
+        {% comment "podcasts" %}
+        <!-- List of Podcast Links -->
+        <ul class="list-group">
+            <li class="list-group-item">
+                <a href="#" class="podcast-link">{% trans "Podcast Episode 1: Sushi Basics" %}</a>
+            </li>
+            <!-- Repeat for other podcast episodes -->
+        </ul>
+        {% endcomment %}
+    </div>
+
+    <!-- Digital Picture Book Coming Soon -->
+    <div class="picture-book-section">
+        <h3 class="mb-3">{% trans "Digital Picture Book (Coming Soon!)" %}</h3>
+        <p>{% trans "Stay tuned for an interactive picture book that will take you on a delicious adventure." %}</p>
+    </div>
 </div>
